@@ -134,7 +134,7 @@ export const UserFrom = () => {
               } else {
                 toast.error('请检查您的账号密码！')
               }
-            } catch (e) {
+            } catch (e: any) {
               console.log(e)
               toast.error(e?.message)
             } finally {
