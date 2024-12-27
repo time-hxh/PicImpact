@@ -3,6 +3,7 @@
 import { Search } from 'lucide-react'
 import { useButtonStore } from '~/app/providers/button-store-Providers'
 import { usePathname } from 'next/navigation'
+import React from 'react'
 
 export default function SearchButton() {
   const pathname = usePathname()
