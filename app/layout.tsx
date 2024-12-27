@@ -1,4 +1,4 @@
-import type { Metadata, ResolvingMetadata } from 'next'
+import type { Metadata } from 'next'
 
 import { ThemeProvider } from '~/app/providers/next-ui-providers'
 import { ToasterProviders } from '~/app/providers/toaster-providers'
@@ -10,13 +10,12 @@ import '~/style/globals.css'
 import { fetchConfigsByKeys } from '~/server/db/query'
 
 type Props = {
-  params: { id: string }
-  searchParams: { [key: string]: string | string[] | undefined }
+  _params: { id: string }
+  _searchParams: { [key: string]: string | string[] | undefined }
 }
 
 export async function generateMetadata(
-  { params, searchParams }: Props,
-  parent: ResolvingMetadata
+  _props: Props
 ): Promise<Metadata> {
 
   const data = await fetchConfigsByKeys([

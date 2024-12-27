@@ -58,15 +58,6 @@ export async function GET(request: Request) {
           url: item.preview_url || item.url,
           type: 'image/jpeg',
         },
-        media: {
-          content: {
-            url: item.preview_url || item.url,
-            type: 'image/jpeg',
-          },
-          thumbnail: {
-            url: item.preview_url || item.url,
-          },
-        },
       })
     })
   }
